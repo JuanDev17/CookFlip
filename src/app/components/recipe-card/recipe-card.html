@@ -1,0 +1,25 @@
+<mat-card>
+  <img
+    [src]="recipe.image"
+    [alt]="recipe.title"
+  />
+
+  <div class="card-bottom">
+    <div class="recipe-info">
+      <span class="title">
+        {{ recipe.title }}
+      </span>
+
+      <span class="rating">
+        <mat-icon>star</mat-icon>
+        {{ recipe.rating }}
+      </span>
+    </div>
+
+    <button mat-icon-button>
+      <mat-icon>
+        {{ recipe.isFavorite ? 'favorite' : 'favorite_border' }}
+      </mat-icon>
+    </button>
+  </div>
+</mat-card>

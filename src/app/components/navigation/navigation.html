@@ -1,0 +1,33 @@
+<div class="navbar-container" [class.auth-navbar]="authOnly">
+    <div class="logo" routerLink="/">
+        COOK <br /> FLIP
+    </div>
+
+    @if (!authOnly) {
+      <div class="link-container">
+          <button mat-button class="toggle-option" routerLink="/howItWorks" routerLinkActive="active">
+              How It Works
+          </button>
+          <button mat-button class="toggle-option" routerLink="/explore" routerLinkActive="active">
+              Explore
+          </button>
+          <button mat-button class="toggle-option" routerLink="/creators" routerLinkActive="active">
+              Creators
+          </button>
+
+          <button mat-button class="toggle-option" routerLink="/faq" routerLinkActive="active">
+              FAQ
+          </button>
+      </div>
+
+      <div class="login-signup-container">
+          <button mat-button class="toggle-option" routerLink="/login">
+              Login
+          </button>
+
+          <button mat-button class="get-started-btn" routerLink="/register">
+              Get Started
+          </button>
+      </div>
+    }
+</div>

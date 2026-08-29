@@ -1,0 +1,29 @@
+<app-navigation></app-navigation>
+
+
+<section class="landing-header">
+
+  <div class="left-header-half">
+    <h4>
+      Find it. Save it. Cook it. <br />
+      Explore recipes and discover <br /> your next favorite meal.
+    </h4>
+
+    <p>
+      Where food lovers discover, save, and share recipes for every craving.
+      Browse new ideas, build your personal collection, and always know
+      what to cook next.
+    </p>
+
+    <button mat-button routerLink="/register">
+      Make a post
+    </button>
+  </div>
+
+<div class="right-header-half">
+  @for (recipe of recipes; track recipe.id) {
+    <app-recipe-card [recipe]="recipe" />
+  }
+</div>
+
+</section>

@@ -1,0 +1,119 @@
+.landing-header {
+  display: flex;
+  gap: 3rem;
+
+  max-width: 1100px;
+  margin: 7rem auto 0;
+  padding: 0 2rem;
+}
+
+.left-header-half,
+.right-header-half {
+  width: 50%;
+}
+
+.left-header-half {
+  display: flex;
+  flex-direction: column;
+ 
+  
+
+ h4 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.2;
+  margin: 0;
+}
+
+  p {
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    line-height: 1.6;
+    max-width: 550px;
+    margin: 1.5rem 0;
+  }
+
+  button {
+    border-radius: 9999px;
+    background-color: #e72b1c;
+    color: #fff;
+    padding: 8px 20px;
+    width: 25%;
+  }
+}
+
+.right-header-half {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.right-header-half app-recipe-card {
+  display: block;
+}
+
+.right-header-half app-recipe-card:nth-child(1) {
+  transform: rotate(-4deg);
+}
+
+.right-header-half app-recipe-card:nth-child(2) {
+  transform: rotate(4deg);
+}
+
+.right-header-half app-recipe-card:nth-child(3) {
+  transform: rotate(3deg);
+}
+
+.right-header-half app-recipe-card:nth-child(4) {
+  transform: rotate(-3deg);
+}
+
+.right-header-half app-recipe-card:nth-child(2) {
+  margin-top: 2rem;
+}
+
+.right-header-half app-recipe-card:nth-child(3) {
+  margin-top: -1rem;
+}
+
+.right-header-half app-recipe-card:nth-child(4) {
+  margin-top: 1rem;
+}
+
+.right-header-half app-recipe-card:nth-child(1) {
+  animation: float-left 4s ease-in-out infinite;
+}
+
+.right-header-half app-recipe-card:nth-child(2) {
+  animation: float-right 5s ease-in-out infinite;
+}
+
+.right-header-half app-recipe-card:nth-child(3) {
+  animation: float-right 4.5s ease-in-out infinite;
+}
+
+.right-header-half app-recipe-card:nth-child(4) {
+  animation: float-left 5.5s ease-in-out infinite;
+}
+
+@keyframes float-left {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-4deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(-2deg);
+  }
+}
+
+@keyframes float-right {
+  0%,
+  100% {
+    transform: translateY(0) rotate(4deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+}
