@@ -1,0 +1,58 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.search-container {
+   margin-left: 72px;
+  padding: 24px;
+
+  box-sizing: border-box;
+  display: flex;
+}
+
+.main-container {
+  margin-left: 72px;
+  padding: 24px;
+
+  box-sizing: border-box;
+
+  width: calc(100% - 72px);
+  min-height: 100vh;
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+  margin-left: auto;
+
+  padding-left: 16px;
+
+  
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+}
+
+.user-controls button {
+  min-width: auto;
+  padding: 4px;
+}
+
+.recipe-feed {
+  width: 100%;
+  column-width: 220px;
+  column-gap: 16px;
+}
+
