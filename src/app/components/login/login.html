@@ -1,0 +1,92 @@
+<div class="login-page">
+
+<section class="login-info">
+  <h1>
+    Welcome back. <br />
+    Let's find something good.
+  </h1>
+
+  <p class="login-description">
+    Your saved recipes, new favorites, and next meal
+    are waiting for you.
+  </p>
+
+  <div class="info-item">
+    <mat-icon>bookmark</mat-icon>
+
+    <div>
+      <strong>Your Saves</strong>
+      <p>Jump back into the recipes you've saved for later.</p>
+    </div>
+  </div>
+
+  <div class="info-item">
+    <mat-icon>explore</mat-icon>
+
+    <div>
+      <strong>Discover More</strong>
+      <p>Find something new based on whatever you're craving.</p>
+    </div>
+  </div>
+
+  <div class="info-item">
+    <mat-icon>restaurant</mat-icon>
+
+    <div>
+      <strong>Start Cooking</strong>
+      <p>Turn your saved inspiration into your next meal.</p>
+    </div>
+  </div>
+</section>
+
+  <section class="form-container">
+
+<div class="terms-section">
+  <span class="register-title">Welcome Back</span>
+
+  <p class="terms-text">
+    Log in to access your saved recipes and discover what to cook next.
+  </p>
+</div>
+
+<button mat-stroked-button class="google-button">
+  <span class="google-content">
+    <img src="/assets/google.png" alt="Google" />
+    <span>Continue with Google</span>
+  </span>
+</button>
+
+    <div class="divider-row" aria-label="Or separator">
+      <span class="line"></span>
+      <span class="or-text">Or</span>
+      <span class="line"></span>
+    </div>
+
+    <form [formGroup]="loginForm" class="signup-form">
+
+      <label class="field-label">
+        Email Address
+        <span class="required">*</span>
+      </label>
+
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="you@email.com"
+      />
+
+      <button type="submit" class="submit-btn">
+        Send one-time link
+      </button>
+
+      <hr />
+
+      <div class="login-link" routerLink="/login">
+        Don't have an account? Sign up
+      </div>
+
+    </form>
+
+  </section>
+
+</div>

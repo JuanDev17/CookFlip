@@ -1,0 +1,45 @@
+.navbar-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.link-container {
+    display: flex;
+    gap: 5px;
+    border: transparent;
+    background-color: transparent;
+    
+    
+    button {
+     color: #000;
+
+        
+    }
+}
+
+
+.login-signup-container {
+  display: flex;
+  gap: 5px;
+  border: transparent;
+  background-color: transparent;
+
+  button {
+    color: #000;
+  }
+
+  .get-started-btn {
+    border-radius: 9999px;
+    border: 1px solid #E72B1C;
+    background-color: #E72B1C;
+    color: #fff;
+    padding: 8px 16px;
+  }
+}
+
+.logo {
+  
+}

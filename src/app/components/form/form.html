@@ -1,0 +1,104 @@
+<div class="register-page">
+
+<section class="register-info">
+  <h1>
+    Join a community built <br />
+    for food lovers.
+  </h1>
+
+  <p class="register-description">
+    Discover new recipes, save the ones you love,
+    and always know what to cook next.
+  </p>
+
+  <div class="info-item">
+    <mat-icon>search</mat-icon>
+
+    <div>
+      <strong>Find It</strong>
+      <p>
+        Discover recipes for every craving, occasion,
+        and meal.
+      </p>
+    </div>
+  </div>
+
+  <div class="info-item">
+    <mat-icon>bookmark</mat-icon>
+
+    <div>
+      <strong>Save It</strong>
+      <p>
+        Keep your favorite recipes organized and ready
+        whenever you need them.
+      </p>
+    </div>
+  </div>
+
+  <div class="info-item">
+    <mat-icon>restaurant</mat-icon>
+
+    <div>
+      <strong>Cook It</strong>
+      <p>
+        Follow simple recipes and turn inspiration
+        into your next meal.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <section class="form-container">
+
+    <div class="terms-section">
+      <span class="register-title">Register</span>
+
+      <p class="terms-text">
+        By signing up, you agree to our
+        <a routerLink="/terms">Terms of Service</a>
+        and
+        <a routerLink="/privacy">Privacy Policy</a>.
+      </p>
+    </div>
+
+<button mat-stroked-button class="google-button">
+  <span class="google-content">
+    <img src="/assets/google.png" alt="Google" />
+    <span>Continue with Google</span>
+  </span>
+</button>
+
+    <div class="divider-row" aria-label="Or separator">
+      <span class="line"></span>
+      <span class="or-text">Or</span>
+      <span class="line"></span>
+    </div>
+
+    <form [formGroup]="signUpForm" class="signup-form">
+
+      <label class="field-label">
+        Email Address
+        <span class="required">*</span>
+      </label>
+
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="you@email.com"
+      />
+
+      <button type="submit" class="submit-btn">
+        Send one-time link
+      </button>
+
+      <hr />
+
+      <div class="login-link" routerLink="/login">
+        Already have an account? Log In
+      </div>
+
+    </form>
+
+  </section>
+
+</div> 

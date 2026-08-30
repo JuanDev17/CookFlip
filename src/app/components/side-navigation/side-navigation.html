@@ -1,0 +1,42 @@
+<div class="side-panel-container">
+
+<div style="padding: 15px;">
+    <span>COOK<br/>FLIP</span>
+</div>
+
+  <div class="side-panel-main">
+    @for (item of sidePanelItems; track item.route) {
+      @if (item.label !== 'Settings') {
+        <a
+          class="side-panel-item"
+          [routerLink]="item.route"
+          routerLinkActive="active"
+        >
+            <mat-icon class="material-symbols-outlined">
+            {{ item.icon }}</mat-icon>
+
+          @if (item.badge) {
+            <span class="badge">
+              {{ item.badge }}
+            </span>
+          }
+        </a>
+      }
+    }
+  </div>
+
+  <div class="side-panel-settings">
+    @for (item of sidePanelItems; track item.route) {
+      @if (item.label === 'Settings') {
+        <a
+          class="side-panel-item"
+          [routerLink]="item.route"
+          routerLinkActive="active"
+        >
+          <mat-icon class="material-symbols-outlined">{{ item.icon }}</mat-icon>
+        </a>
+      }
+    }
+  </div>
+
+</div>
