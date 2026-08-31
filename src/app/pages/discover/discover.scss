@@ -20,6 +20,11 @@
 
   padding-left: 16px;
 
+  mat-icon {
+    border: none;
+    
+  }
+
   
 }
 
@@ -51,12 +56,3 @@
   width: calc(100% - 72px);
   min-height: 100vh;
 }
-
-
-
-.recipe-feed {
-  width: 100%;
-  column-width: 220px;
-  column-gap: 16px;
-}
-

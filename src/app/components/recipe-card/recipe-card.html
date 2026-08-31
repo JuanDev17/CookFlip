@@ -1,25 +1,44 @@
-<mat-card>
-  <img
-    [src]="recipe.image"
-    [alt]="recipe.title"
-  />
 
-  <div class="card-bottom">
-    <div class="recipe-info">
-      <span class="title">
-        {{ recipe.title }}
-      </span>
+<mat-card [class.masonry]="masonry">
 
-      <span class="rating">
-        <mat-icon>star</mat-icon>
-        {{ recipe.rating }}
-      </span>
-    </div>
+  <div class="image-container">
+    <img
+      [src]="recipe.image"
+      [alt]="recipe.title"
+      [style.height.px]="masonry ? recipe.imageHeight : null"
+    />
 
-    <button mat-icon-button>
-      <mat-icon>
-        {{ recipe.isFavorite ? 'favorite' : 'favorite_border' }}
-      </mat-icon>
-    </button>
+    @if (masonry) {
+     <button
+  mat-icon-button
+  class="favorite-button"
+  [class.is-favorite]="recipe.isFavorite">
+  <mat-icon>
+    {{ recipe.isFavorite ? 'favorite' : 'favorite_border' }}
+  </mat-icon>
+</button>
+    }
   </div>
+
+  @if (!masonry) {
+    <div class="card-bottom">
+      <div class="recipe-info">
+        <span class="title">
+          {{ recipe.title }}
+        </span>
+
+        <span class="rating">
+          <mat-icon>star</mat-icon>
+          {{ recipe.rating }}
+        </span>
+      </div>
+
+      <button mat-icon-button>
+        <mat-icon>
+          {{ recipe.isFavorite ? 'favorite' : 'favorite_border' }}
+        </mat-icon>
+      </button>
+    </div>
+  }
+
 </mat-card>

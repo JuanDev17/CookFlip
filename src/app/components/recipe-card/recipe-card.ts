@@ -13,4 +13,5 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class RecipeCard {
   @Input() recipe!: IRecipeCard;
+  @Input() masonry = false;
 }
