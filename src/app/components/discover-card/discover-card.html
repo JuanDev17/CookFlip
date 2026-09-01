@@ -1,10 +1,20 @@
-<main>
-    <div>
-        <mat-card class="discover-card">
-        <mat-card-content>
-            <span>{{ title }}</span>
-        </mat-card-content>
-    </mat-card>
-    </div>
-    
-</main>
+<mat-card class="discover-card">
+
+  <img
+    [src]="image"
+    [alt]="title"
+  />
+
+  <div class="overlay"></div>
+
+  <div class="card-content">
+    <span class="subtitle">
+      {{ subtitle }}
+    </span>
+
+    <span class="title">
+      {{ title }}
+    </span>
+  </div>
+
+</mat-card>

@@ -24,5 +24,55 @@
 </section>
 
 <main class="main-container">
-    <app-discover-card title="Vegan" />
+
+  <section class="discover-page">
+    <h1>Explore FoodFeeder</h1>
+
+    <div class="discover-container">
+      @for (item of discoverItems.slice(0, visibleCount); track item.title) {
+        <app-discover-card
+          [title]="item.title"
+          [subtitle]="item.subtitle"
+          [image]="item.image">
+        </app-discover-card>
+      }
+    </div>
+
+    @if (visibleCount < discoverItems.length) {
+      <div class="show-more">
+        <button mat-button (click)="showMore()">
+          Show more
+        </button>
+      </div>
+    }
+  </section>
+
+  <section class="categories-section">
+    <h2>Browse by category</h2>
+
+    <div class="categories-grid">
+      @for (category of Categories.slice(0, visibleCatCount); track category.type) {
+        <app-category-card
+          [category]="category">
+        </app-category-card>
+      }
+    </div>
+
+      @if (visibleCatCount < Categories.length) {
+      <div class="show-more">
+        <button mat-button (click)="showMoreCat()">
+          Show more
+        </button>
+      </div>
+    }
+
+  </section>
+
+  <section class="trending-section">
+    <h2>Explore Popular Boards</h2>
+
+    <div>
+        
+    </div>
+  </section>
 </main>
