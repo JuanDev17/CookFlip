@@ -14,8 +14,9 @@ import { IDiscoverCard } from '../../api/types/discover-card';
 export class DiscoverCard {
 
   @Input() title = '';
-  @Input() type = ''; 
+  @Input() subtitle = ''; 
+  @Input() image = '';
 
   // open modal 
-  
+
 }

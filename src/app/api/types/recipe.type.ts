@@ -1,3 +1,5 @@
+import { UserSummary } from "./user.type";
+
 export interface IRecipeCard {
     id: string, 
     image: string,
@@ -12,3 +14,9 @@ export interface IRecipeCard {
   imageHeight?:number
 }
 
+export interface RecipeSummary {
+  id: string;
+  title: string;
+  imageUrl: string;
+  cookTimeMinutes?: number;
+}
