@@ -8,9 +8,13 @@ import { DiscoverFeed } from '../../api/mocks/discover-feed';
 import { MatButtonModule } from '@angular/material/button';
 import { CategoryCard } from '../../components/category-card/category-card';
 import { Categories } from '../../api/mocks/categories';
+import { BoardService } from '../../components/board-card/services/board-service';
+import { BoardCard } from '../../components/board-card/board-card';
 
 @Component({
-  imports: [CommonModule, SideNavigation, SearchComponent, MatIconModule, DiscoverCard, MatButtonModule, CategoryCard],
+  imports: [CommonModule, SideNavigation, SearchComponent, MatIconModule, DiscoverCard, MatButtonModule, CategoryCard, BoardCard
+    
+  ],
   selector: 'app-discover',
   styleUrl: './discover.scss',
   templateUrl: './discover.html',
@@ -20,6 +24,7 @@ export class Discover {
 
   #discoverService = inject(DiscoverFeed);
   #categoryService = inject(Categories);
+  #boardService = inject(BoardService);
 
   visibleCount = 3;
   visibleCatCount = 10;
@@ -39,6 +44,10 @@ export class Discover {
 
   get Categories(){
     return this.#categoryService.categories
+  }
+
+  get boards(){
+    return this.#boardService.trendingBoards;
   }
 
 

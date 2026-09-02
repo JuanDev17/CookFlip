@@ -1,9 +1,45 @@
-<main>
-  <mat-card>
-    <img />
-    <img />
-    <img />
+<main class="main-container">
+    <mat-card class="board-card">
 
-    <
-  </mat-card>
+<div class="board-images">
+
+  <div class="left-image">
+    <img
+      [src]="board.previewRecipes[0].imageUrl"
+      [alt]="board.previewRecipes[0].title"
+    />
+  </div>
+
+  <div class="right-images">
+    <div>
+      <img
+        [src]="board.previewRecipes[1].imageUrl"
+        [alt]="board.previewRecipes[1].title"
+      />
+    </div>
+
+    <div>
+      <img
+        [src]="board.previewRecipes[2].imageUrl"
+        [alt]="board.previewRecipes[2].title"
+      />
+    </div>
+  </div>
+
+</div>
+
+  <h3>{{ board.title }}</h3>
+
+  <span style="align-items: center; display: flex; gap: 8px;">
+    {{ board.owner.displayName }} <mat-icon>verified</mat-icon>
+  </span>
+
+  <span>{{ board.recipeCount }} recipes</span>
+
+    @if (board.saveCount) {
+        <span>{{ board.saveCount }} saves</span>
+    }
+
+</mat-card>
+
 </main>
