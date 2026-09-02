@@ -8,6 +8,7 @@ export interface PopularBoard {
   tags: string[];
   previewRecipes: RecipeSummary[];
   recipeCount: number;
+  saveCount?: number;
 }
 
 export interface BoardDetails {

@@ -71,8 +71,12 @@
   <section class="trending-section">
     <h2>Explore Popular Boards</h2>
 
-    <div>
-        
-    </div>
+    <section class="popular-boards">
+
+  @for (board of boards; track board.id) {
+    <app-board-card [board]="board" />
+  }
+
+</section>
   </section>
 </main>
