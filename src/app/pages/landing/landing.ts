@@ -6,9 +6,10 @@ import { RecipeMock } from '../../api/mocks/recipe-mock';
 import { IRecipeCard } from '../../api/types/recipe.type';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { filter } from 'rxjs';
+import { Footer } from '../../components/footer/footer';
 
 @Component({
-  imports: [Navigation, MatButtonModule, RecipeCard, RouterLink],
+  imports: [Navigation, MatButtonModule, RecipeCard, RouterLink, Footer],
   selector: 'app-landing',
   styleUrl: './landing.scss',
   templateUrl: './landing.html',

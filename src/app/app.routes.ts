@@ -4,6 +4,7 @@ import { Login } from './pages/login/login';
 import { Landing } from './pages/landing/landing';
 import { Explore } from './pages/explore/explore';
 import { Discover } from './pages/discover/discover';
+import { Boards } from './pages/boards/boards';
 
 export const routes: Routes = [
     {
@@ -25,5 +26,9 @@ export const routes: Routes = [
     {
         path: 'discover',
         component: Discover
+    },
+    {
+        path: 'boards',
+        component: Boards
     }
 ];
