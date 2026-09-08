@@ -1,0 +1,12 @@
+
+/* Header/search styles moved to global `src/styles.scss` */
+
+.main-container {
+  margin-left: 72px;
+  padding: 24px;
+
+  box-sizing: border-box;
+
+  width: calc(100% - 72px);
+  min-height: 100vh;
+}

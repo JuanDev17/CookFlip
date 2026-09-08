@@ -9,26 +9,26 @@ import { Boards } from './pages/boards/boards';
 export const routes: Routes = [
     {
         path: 'register',
-        component: Register
+        loadComponent: () => import('./pages/register/register').then((m) => m.Register)
     },
     {
         path: 'login',
-        component: Login
+        loadComponent: () => import('./pages/login/login').then((m) => m.Login)
     },
     {
         path: '',
-        component: Landing
+        loadComponent: () => import('./pages/landing/landing').then((m) => m.Landing)
     },
     {
         path: 'explore',
-        component: Explore
+        loadComponent: () => import('./pages/explore/explore').then((m) => m.Explore)
     },
     {
         path: 'discover',
-        component: Discover
+        loadComponent   : () => import('./pages/discover/discover').then((m) => m.Discover)
     },
     {
         path: 'boards',
-        component: Boards
+        loadChildren: () => import('./boards.routes').then((m) => m.boardRoutes)
     }
 ];

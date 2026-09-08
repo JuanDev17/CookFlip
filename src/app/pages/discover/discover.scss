@@ -3,47 +3,7 @@
   width: 100%;
 }
 
-.search-container {
-   margin-left: 72px;
-  padding: 24px;
-
-  box-sizing: border-box;
-  display: flex;
-}
-
-.user-controls {
-  display: flex;
-  align-items: center;
-
-  gap: 4px;
-  margin-left: auto;
-
-  padding-left: 16px;
-
-  mat-icon {
-    border: none;
-
-  }
-
-  
-}
-
-.avatar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 40px;
-  height: 40px;
-
-  border: 1px solid #cfcfcf;
-  border-radius: 50%;
-}
-
-.user-controls button {
-  min-width: auto;
-  padding: 4px;
-}
+/* Header/search styles moved to global `src/styles.scss` */
 
 
 
