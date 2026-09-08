@@ -4,7 +4,7 @@ import { INavigationType } from '../../api/types/side-navigation';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [MatIconModule, RouterLink],
+  imports: [MatIconModule, RouterLink,],
   selector: 'app-side-navigation',
   styleUrl: './side-navigation.scss',
   templateUrl: './side-navigation.html',
@@ -25,7 +25,7 @@ export class SideNavigation {
   },
   {
     label: 'Board',
-    route: '/board',
+    route: '/boards',
     icon: 'dashboard',
     requiresAuth: true,
   },
