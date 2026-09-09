@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 export class Boards {
   readonly router = inject(Router);
 
+  // handling routes inside the boards page, 
    readonly quickMenu: INavigationType[] = [
     {
       label: 'Pins',
