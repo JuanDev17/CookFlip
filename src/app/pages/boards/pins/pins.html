@@ -1,1 +1,10 @@
-<p>pins works!</p>
+<main class="main-container">
+  <div class="recipe-feed">
+    @for (recipe of recipes; track recipe.id) {
+      <app-recipe-card
+        [recipe]="recipe"
+        [masonry]="true">
+      </app-recipe-card>
+    }
+  </div>
+</main>

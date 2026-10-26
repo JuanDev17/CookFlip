@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+/* Header/search styles moved to global `src/styles.scss` */
+
+
+
+
+
+.recipe-feed {
+  width: 100%;
+  column-width: 220px;
+  column-gap: 16px;
+}
+
