@@ -1,9 +1,15 @@
-import { inject, Service } from '@angular/core';
+import { inject, Injectable, Service } from '@angular/core';
 import { FeederMock } from '../../../api/mocks/feeder-recipe';
+import { RecipeService } from '../../../api/models/services/recipe-service';
 
-@Service()
+@Injectable()
+ 
 export class ExploreServices {
-    recipes = inject(FeederMock);
+    #recipeService = inject(RecipeService);
+
+    getAllRecipes() {
+        return this.#recipeService.getAllRecipes();
+    }
 
     
 }
